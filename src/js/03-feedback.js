@@ -22,7 +22,7 @@ function onTextareaInput(evt) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(feedbackForm));
 }
 
-//btn submit - reset storage
+//btn submit - reset msg
 function onFormSubmit(evt) {
   evt.preventDefault();
   evt.currentTarget.reset();
