@@ -36,4 +36,10 @@ function dataFromLocalStorage() {
     refs.textarea.value = savedMessage.message;
     refs.email.value = savedMessage.email;
   }
+  // if (savedMessage.message) {
+  //   refs.textarea.value = savedMessage.message;
+  // }
+  // if (savedMessage.email) {
+  //   refs.email.value = savedMessage.email;
+  // }
 }
