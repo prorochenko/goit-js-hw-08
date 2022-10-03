@@ -7,7 +7,10 @@ const refs = {
 };
 
 const STORAGE_KEY = `feedback-form-state`;
-const feedbackForm = {};
+const feedbackForm = {
+  email: '',
+  message: '',
+};
 
 refs.form.addEventListener(`submit`, onFormSubmit);
 refs.textarea.addEventListener(`input`, throttle(onTextareaInput, 500));
@@ -32,14 +35,8 @@ function onFormSubmit(evt) {
 //localStorage write in input, if it have.
 function dataFromLocalStorage() {
   const savedMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  // if (savedMessage) {
-  //   refs.textarea.value = savedMessage.message;
-  //   refs.email.value = savedMessage.email;
-  // }
-  if (savedMessage.message) {
+  if (savedMessage) {
     refs.textarea.value = savedMessage.message;
-  }
-  if (savedMessage.email) {
     refs.email.value = savedMessage.email;
   }
 }
