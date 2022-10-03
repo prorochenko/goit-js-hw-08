@@ -32,14 +32,14 @@ function onFormSubmit(evt) {
 //localStorage write in input, if it have.
 function dataFromLocalStorage() {
   const savedMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  if (savedMessage) {
-    refs.textarea.value = savedMessage.message;
-    refs.email.value = savedMessage.email;
-  }
-  // if (savedMessage.message) {
+  // if (savedMessage) {
   //   refs.textarea.value = savedMessage.message;
-  // }
-  // if (savedMessage.email) {
   //   refs.email.value = savedMessage.email;
   // }
+  if (savedMessage.message) {
+    refs.textarea.value = savedMessage.message;
+  }
+  if (savedMessage.email) {
+    refs.email.value = savedMessage.email;
+  }
 }
